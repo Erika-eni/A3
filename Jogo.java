@@ -22,6 +22,7 @@ public class Jogo {
                 turno(jogador2, jogador1);
             }
         }
+        //declara o vencedor
 
         System.out.println("FIM de jogo!!!!");
         if (jogador1.getVida() > 0) {
@@ -64,7 +65,7 @@ public class Jogo {
                     System.out.println("✘✘✘ Jogada inválida, tente novamente.");
                 }
             }
-
+            //opção de sair do jogo a qualquer momento
             boolean opcaoValida = false;
             while (opcaoValida == false) {
                 System.out.println("Deseja salvar o jogo (s), sair (x) ou continuar (c)?");
@@ -89,6 +90,7 @@ public class Jogo {
                 }
             }
 
+            //jogada extra caso faça 4
             if (jogadorAtual.temJogadaExtra()) {
                 jogadorAtual.usarJogadaExtra();
                 jogadaValida = false; // reinicia a validação da jogada para a próxima jogada extra
